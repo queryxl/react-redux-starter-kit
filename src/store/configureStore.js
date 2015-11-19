@@ -3,14 +3,14 @@ import thunk                from 'redux-thunk';
 import routes               from '../routes';
 import { reduxReactRouter } from 'redux-router';
 import createHistory        from 'history/lib/createBrowserHistory';
-import DevTools             from 'containers/DevTools';
+import DevTools             from '../containers/DevTools';
 import {
   applyMiddleware,
   compose,
   createStore
 } from 'redux';
 
-export default function configureStore (initialState, debug = false) {
+export default function configureStore(initialState, debug = false) {
   let createStoreWithMiddleware;
 
   const middleware = applyMiddleware(thunk);
@@ -18,13 +18,13 @@ export default function configureStore (initialState, debug = false) {
   if (debug) {
     createStoreWithMiddleware = compose(
       middleware,
-      reduxReactRouter({ routes, createHistory }),
+      reduxReactRouter({routes, createHistory}),
       DevTools.instrument()
     );
   } else {
     createStoreWithMiddleware = compose(
       middleware,
-      reduxReactRouter({ routes, createHistory })
+      reduxReactRouter({routes, createHistory})
     );
   }
 

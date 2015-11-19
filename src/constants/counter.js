@@ -1,5 +1,9 @@
-import { createConstants } from '../utils';
+/*
+ import { createConstants } from '../utils';
 
-export default createConstants(
-  'COUNTER_INCREMENT'
-);
+
+ export default createConstants(
+ 'COUNTER_INCREMENT'
+ );
+ */
+export const COUNTER_INCREMENT = 'COUNTER_INCREMENT';
