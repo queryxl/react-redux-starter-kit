@@ -1,5 +1,7 @@
-Changes:
-- for better IDE (WebStorm) support:
+## react-redux-starter-kit tailored ![travis](https://travis-ci.org/queryxl/react-redux-starter-kit.svg?branch=master)
+### Updated Nov, 2015
+### Changes:
+- for better IDE (WebStorm) 'goto' support:
     * do not use createConstants
     * remove path alias
 - change eslint rules
