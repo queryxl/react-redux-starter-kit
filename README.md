@@ -1,5 +1,5 @@
 ## react-redux-starter-kit tailored ![travis](https://travis-ci.org/queryxl/react-redux-starter-kit.svg?branch=master)
-### Updated Nov, 2015
+
 ### Changes:
 - for better IDE (WebStorm) 'goto' support:
     * do not use createConstants
