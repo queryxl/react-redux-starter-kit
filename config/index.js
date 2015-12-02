@@ -22,7 +22,7 @@ config.set('coverage_reporters', [
 ]);
 
 config.set('webpack_host',  'localhost');
-config.set('webpack_port',  process.env.PORT || 3000);
+config.set('webpack_port',  process.env.PORT || 9090);
 
 // Define what dependencies we'd like to treat as vendor dependencies,
 // but only include the ones that actually exist in package.json. This
