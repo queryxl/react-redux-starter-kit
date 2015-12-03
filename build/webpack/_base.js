@@ -1,7 +1,7 @@
 import webpack           from 'webpack';
-import config            from '../../config';
+import cssnano           from 'cssnano';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import autoprefixer      from 'autoprefixer';
+import config            from '../../config';
 
 const paths = config.get('utils_paths');
 
@@ -65,7 +65,7 @@ const webpackConfig = {
         test    : /\.scss$/,
         loaders : [
           'style-loader',
-          'css-loader',
+          'css-loader?sourceMap',
           'postcss-loader',
           'sass-loader'
         ]
@@ -82,7 +82,19 @@ const webpackConfig = {
   sassLoader : {
     includePaths : paths.src('styles')
   },
-  postcss : [ autoprefixer({ browsers : ['last 2 versions'] }) ]
+  postcss : [
+    cssnano({
+      sourcemap : true,
+      autoprefixer : {
+        add      : true,
+        remove   : true,
+        browsers : ['last 2 versions']
+      },
+      discardComments : {
+        removeAll : true
+      }
+    })
+  ]
 };
 
 // NOTE: this is a temporary workaround. I don't know how to get Karma

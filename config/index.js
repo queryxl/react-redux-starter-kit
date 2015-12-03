@@ -15,7 +15,7 @@ config.set('dir_src',  'src');
 config.set('dir_dist', 'dist');
 config.set('dir_test', 'tests');
 
-config.set('coverage_enabled', !argv.watch);
+config.set('coverage_enabled', !argv.watch); // enabled if not in watch mode
 config.set('coverage_reporters', [
   { type : 'text-summary' },
   { type : 'html', dir : 'coverage' }
@@ -23,6 +23,8 @@ config.set('coverage_reporters', [
 
 config.set('webpack_host',  'localhost');
 config.set('webpack_port',  process.env.PORT || 9090);
+
+config.set('production_enable_source_maps', false);
 
 // Define what dependencies we'd like to treat as vendor dependencies,
 // but only include the ones that actually exist in package.json. This
