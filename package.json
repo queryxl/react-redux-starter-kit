@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "lint": "eslint ./src/**/*.js",
     "lint:tests": "eslint ./tests/**/*.spec.js",
-    "compile": "webpack",
+    "compile": "NODE_ENV=production webpack -p",
     "start": "npm run dev:no-debug",
     "dev": "node --harmony bin/server",
     "dev:nw": "npm run dev -- --nw",
