@@ -21,8 +21,8 @@ config.set('coverage_reporters', [
   { type : 'html', dir : 'coverage' }
 ]);
 
-config.set('webpack_host',  'localhost');
-config.set('webpack_port',  process.env.PORT || 9090);
+config.set('server_host',  'localhost');
+config.set('server_port',  process.env.PORT || 9090);
 
 config.set('production_enable_source_maps', false);
 
@@ -48,13 +48,13 @@ config.set('vendor_dependencies', [
 }));
 
 /*  *********************************************
--------------------------------------------------
+ -------------------------------------------------
 
-All Internal Configuration Below
-Edit at Your Own Risk
+ All Internal Configuration Below
+ Edit at Your Own Risk
 
--------------------------------------------------
-************************************************/
+ -------------------------------------------------
+ ************************************************/
 // ------------------------------------
 // Environment
 // ------------------------------------
