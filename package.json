@@ -8,7 +8,7 @@
     "lint": "eslint ./src/**/*.js",
     "lint:tests": "eslint ./tests/**/*.spec.js",
     "compile": "webpack",
-    "start": "npm run dev",
+    "start": "npm run dev:no-debug",
     "dev": "node --harmony bin/server",
     "dev:nw": "npm run dev -- --nw",
     "dev:no-debug": "npm run dev -- --no_debug",
