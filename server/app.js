@@ -23,7 +23,7 @@ if (config.get('globals').__DEV__) {
     contentBase : paths.project(config.get('dir_src')),
     hot         : true,
     quiet       : false,
-    noInfo      : false,
+    noInfo      : true,
     lazy        : false,
     stats       : {
       colors : true
