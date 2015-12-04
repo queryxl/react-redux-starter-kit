@@ -18,7 +18,10 @@ export default function configureStore(initialState, debug = false) {
       DevTools.instrument()
     );
   } else {
-    createStoreWithMiddleware = compose(middleware);
+    createStoreWithMiddleware = compose(
+      middleware,
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    );
   }
 
   const store = createStoreWithMiddleware(createStore)(
