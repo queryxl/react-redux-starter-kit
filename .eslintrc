@@ -1,25 +1,27 @@
 {
   "parser"  : "babel-eslint",
-  "extends" : "airbnb",
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "plugins" : [
+    "flow-vars"
+  ],
   "env"     : {
     "browser" : true
   },
   "globals" : {
+    "Action"       : false,
     "__DEV__"      : false,
     "__PROD__"     : false,
     "__DEBUG__"    : false,
-    "__DEBUG_NW__" : false
+    "__DEBUG_NEW_WINDOW__" : false,
+    "__BASENAME__" : false
   },
   "rules": {
-    "comma-dangle" : [1, "never"],
-    "func-names"   : 0,
-    "key-spacing"  : 0,
-    "space-before-function-paren" : [2, {"anonymous": "always", "named": "never"}],
-    "no-else-return"   : 0,
-    "no-multi-spaces"  : 0,
-    "quotes"           : [2, "single"],
-    "jsx-quotes"       : [2, "prefer-single"],
-    "one-var"          : 0,
-    "react/jsx-boolean-value": 0
+    "semi" : [2, "never"],
+    "max-len": [2, 120, 2],
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1
   }
 }
